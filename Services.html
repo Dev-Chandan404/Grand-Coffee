@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services – Grand Coffee</title>
+
+  <!-- Bootstrap 4 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- Font Awesome 5 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #f76d37;
+      --dark: #2c1a0d;
+      --cream: #fffaf0;
+      --gray: #6b5a4c;
+      --light-gray: #d9c2a3;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--dark);
+      background: var(--cream);
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: rgba(44, 26, 13, 0.92) !important;
+      backdrop-filter: blur(8px);
+      transition: all 0.4s;
+      padding: 1rem 0;
+    }
+
+    .navbar.scrolled {
+      padding: 0.6rem 0;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .navbar-brand {
+      font-size: 2.1rem;
+      color: white !important;
+      letter-spacing: 1px;
+    }
+
+    .nav-link {
+      color: white !important;
+      font-weight: 500;
+      margin: 0 1rem;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    .nav-link:hover {
+      color: var(--primary) !important;
+      transform: translateY(-2px);
+    }
+    @media (max-width: 991px) {
+      .navbar-collapse {
+        background: rgba(44, 26, 13, 0.96);
+        padding: 2rem 1.5rem;
+        border-radius: 0 0 14px 14px;
+        margin-top: 1rem;
+      }
+      .nav-link { margin: 1rem 0 !important; text-align: center; }
+    }
+
+    /* Services Section */
+    .services-section {
+      padding: 140px 0 100px;
+    }
+
+    .section-title {
+      font-size: 3.8rem;
+      color: var(--primary);
+      text-align: center;
+      margin-bottom: 3.5rem;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      width: 100px;
+      height: 5px;
+      background: var(--primary);
+      position: absolute;
+      bottom: -18px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 3px;
+    }
+
+    .service-desc {
+      text-align: center;
+      font-size: 1.2rem;
+      color: var(--gray);
+      max-width: 720px;
+      margin: 0 auto 4rem;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+      transition: all 0.4s ease;
+      height: 100%;
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    .service-card:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 25px 50px rgba(247,109,55,0.25);
+    }
+
+    .service-icon {
+      width: 90px;
+      margin-bottom: 2rem;
+      filter: drop-shadow(0 8px 15px rgba(247,109,55,0.3));
+      transition: transform 0.4s;
+    }
+
+    .service-card:hover .service-icon {
+      transform: scale(1.1);
+    }
+
+    .service-card h3 {
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+      color: var(--dark);
+    }
+
+    .service-card p {
+      color: var(--gray);
+      font-size: 1.05rem;
+    }
+
+    /* Footer (consistent) */
+    .footer {
+      background: var(--dark);
+      color: var(--light-gray);
+      padding: 6rem 0 3rem;
+    }
+
+    .footer h5 {
+      color: white;
+      font-size: 1.5rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .footer a {
+      color: var(--light-gray);
+      transition: color 0.3s;
+      text-decoration: none;
+    }
+
+    .footer a:hover { color: var(--primary); }
+
+    .social-icons a {
+      font-size: 1.9rem;
+      margin: 0 15px;
+      transition: all 0.3s;
+    }
+
+    .social-icons a:hover {
+      transform: translateY(-6px);
+      color: var(--primary);
+    }
+
+    @media (max-width: 992px) {
+      .services-section { padding: 100px 0 80px; }
+      .section-title { font-size: 3rem; }
+    }
+
+    @media (max-width: 768px) {
+      .section-title { font-size: 2.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+   <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">GrandCoffee</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="Index.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="About.html">ABOUT</a></li>
+          <li class="nav-item"><a class="nav-link" href="Gallery.html">GALLERY</a></li>
+          <li class="nav-item"><a class="nav-link" href="Services.html">SERVICES</a></li>
+          <li class="nav-item"><a class="nav-link" href="Contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Services Section -->
+  <section class="services-section">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="service-desc">We go beyond great coffee — offering experiences that warm the soul and bring people together. Discover what makes Grand Coffee special.</p>
+
+      <div class="row">
+        <div class="col-md-4 mb-5">
+          <div class="service-card">
+            <img src="images/icon1.png" alt="Original Coffee" class="service-icon">
+            <h3>Original Coffee</h3>
+            <p>Hand-selected, small-batch roasted beans crafted into bold, flavorful brews — our signature originals that define every visit.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-5">
+          <div class="service-card">
+            <img src="images/icon2.png" alt="20+ Flavors" class="service-icon">
+            <h3>20+ Coffee Flavors</h3>
+            <p>From classic espresso to creative seasonal specials — explore a world of tastes tailored to every mood and moment.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-5">
+          <div class="service-card">
+            <img src="images/icon3.png" alt="Pleasant Ambience" class="service-icon">
+            <h3>Pleasant Ambience</h3>
+            <p>A cozy, welcoming space with warm lighting, comfortable seating, and a vibe perfect for work, chats, or quiet reflection.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row text-center text-md-left">
+        <div class="col-md-4 mb-5">
+          <h5>Grand Coffee</h5>
+          <p class="mt-3">Crafting moments, one cup at a time.</p>
+          <div class="social-icons mt-4">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="col-md-2 mb-5">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled mt-3">
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 mb-5">
+          <h5>Useful Links</h5>
+          <ul class="list-unstyled mt-3">
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Blog & News</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 mb-5">
+          <h5>Get in Touch</h5>
+          <ul class="list-unstyled mt-3">
+            <li><i class="fas fa-map-marker-alt mr-2"></i> Loram Ipsum Street, City</li>
+            <li><i class="fas fa-phone mr-2"></i> +01 123 456 7890</li>
+            <li><i class="fas fa-envelope mr-2"></i> hello@grandcoffee.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <hr style="border-color: #4a372c; opacity: 0.25;">
+      <p class="text-center mb-0 pt-3">© 2026 Grand Coffee – All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 100);
+    });
+  </script>
+
+</body>
+</html>

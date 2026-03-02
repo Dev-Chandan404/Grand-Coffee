@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grand Coffee – Premium Coffee Experience</title>
+
+  <!-- Bootstrap 4 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <!-- Google Fonts – Modern + Warm -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #e67e22;       /* warm orange */
+      --dark: #2c1a0d;          /* deep coffee brown */
+      --light: #fffaf0;         /* cream */
+      --gray: #6b5a4c;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--dark);
+      background: var(--light);
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: rgba(44, 26, 13, 0.92) !important;
+      backdrop-filter: blur(8px);
+      transition: all 0.4s;
+      padding: 1rem 0;
+    }
+
+    .navbar.scrolled {
+      padding: 0.6rem 0;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .navbar-brand {
+      font-size: 2.1rem;
+      color: white !important;
+      letter-spacing: 1px;
+    }
+
+    .nav-link {
+      color: white !important;
+      font-weight: 500;
+      margin: 0 1rem;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    .nav-link:hover {
+      color: var(--primary) !important;
+      transform: translateY(-2px);
+    }
+
+    /* Hero */
+    .hero {
+      height: 100vh;
+      min-height: 650px;
+      background: linear-gradient(rgba(44,26,13,0.55), rgba(44,26,13,0.75)),
+      url('images/banner-bg.png') center/cover no-repeat fixed;
+      color: white;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .hero-content {
+      max-width: 750px;
+      padding: 0 15px;
+    }
+
+    .hero h1 {
+      font-size: 4.8rem;
+      line-height: 1.05;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    .hero h1 span {
+      color: var(--primary);
+      display: block;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 520px;
+      margin: 1.5rem 0 2rem;
+      opacity: 0.95;
+    }
+
+    .btn-primary-custom {
+      background: var(--primary);
+      border: none;
+      padding: 14px 38px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.4s;
+      box-shadow: 0 6px 20px rgba(230,126,34,0.35);
+    }
+
+    .btn-primary-custom:hover {
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 12px 30px rgba(230,126,34,0.5);
+      background: #d35400;
+    }
+
+    /* Titles */
+    .section-title {
+      font-size: 3.2rem;
+      color: var(--primary);
+      text-align: center;
+      margin: 80px 0 50px;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      width: 80px;
+      height: 4px;
+      background: var(--primary);
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+
+    /* Gallery */
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+      transition: transform 0.5s ease, box-shadow 0.5s;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.12);
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(230,126,34,0.85), transparent 60%);
+      opacity: 0;
+      transition: opacity 0.4s;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 2rem;
+      color: white;
+      font-size: 1.4rem;
+    }
+
+    .gallery-item:hover .overlay {
+      opacity: 1;
+    }
+
+    /* Services */
+    .service-card {
+      background: white;
+      border: none;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.4s ease;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      height: 100%;
+    }
+
+    .service-card:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 25px 50px rgba(230,126,34,0.25);
+    }
+
+    .service-icon {
+      width: 80px;
+      margin: 2rem auto 1.5rem;
+      filter: drop-shadow(0 8px 15px rgba(230,126,34,0.3));
+    }
+
+    .service-card h4 {
+      color: var(--dark);
+      font-size: 1.6rem;
+    }
+
+    .service-card p {
+      color: var(--gray);
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--dark);
+      color: #d9c2a3;
+      padding: 4rem 0 2rem;
+    }
+
+    .footer a {
+      color: #d9c2a3;
+      transition: color 0.3s;
+    }
+
+    .footer a:hover {
+      color: var(--primary);
+    }
+
+    .social-icons a {
+      font-size: 1.6rem;
+      margin: 0 12px;
+      transition: transform 0.3s;
+    }
+
+    .social-icons a:hover {
+      transform: translateY(-5px);
+      color: var(--primary);
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .hero h1 { font-size: 3.8rem; }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 3.2rem; }
+      .hero p  { font-size: 1.1rem; }
+      .section-title { font-size: 2.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">GrandCoffee</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="Index.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="About.html">ABOUT</a></li>
+          <li class="nav-item"><a class="nav-link" href="Gallery.html">GALLERY</a></li>
+          <li class="nav-item"><a class="nav-link" href="Services.html">SERVICES</a></li>
+          <li class="nav-item"><a class="nav-link" href="Contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Outstanding <span>Coffee</span> Experience</h1>
+        <p>Discover handcrafted coffee made with passion in a warm, welcoming space. Your perfect cup awaits.</p>
+        <a href="#" class="btn btn-primary-custom">Explore Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="container">
+    <h2 class="section-title">About Us</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <p class="lead">We believe great coffee tells a story — from bean to cup. At Grand Coffee, every brew is crafted with care, using ethically sourced beans and time-honored techniques in a space designed for connection and comfort.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="container">
+    <h2 class="section-title">Our Gallery</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="gallery-item">
+          <img src="images/img-1.png" alt="Coffee art">
+          <div class="overlay">Latte Art Mastery</div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="gallery-item">
+          <img src="images/img-2.png" alt="Cozy interior">
+          <div class="overlay">Warm Atmosphere</div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="gallery-item">
+          <img src="images/img-3.png" alt="Fresh beans">
+          <div class="overlay">Premium Beans</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="container">
+    <h2 class="section-title">Our Services</h2>
+    <div class="row">
+      <div class="col-md-4 mb-5">
+        <div class="service-card text-center">
+          <img src="images/icon1.png" alt="Original Coffee" class="service-icon">
+          <h4>Original Coffee</h4>
+          <p>Ethically sourced beans roasted to perfection — pure, bold, unforgettable.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-5">
+        <div class="service-card text-center">
+          <img src="images/icon2.png" alt="20 Flavors" class="service-icon">
+          <h4>20+ Coffee Flavors</h4>
+          <p>From classic espresso to creative seasonal blends — something for every mood.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-5">
+        <div class="service-card text-center">
+          <img src="images/icon3.png" alt="Ambience" class="service-icon">
+          <h4>Pleasant Ambience</h4>
+          <p>A cozy, stylish space designed for work, meetings, or quiet moments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row text-center text-md-left">
+        <div class="col-md-4 mb-4">
+          <h5 class="text-white">Grand Coffee</h5>
+          <p>Where every cup tells a story.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5 class="text-white">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Book a Table</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5 class="text-white">Follow Us</h5>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr style="border-color: #4a372c;">
+      <p class="text-center mb-0">© 2026 Grand Coffee – All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('.navbar');
+      if (window.scrollY > 100) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+  </script>
+
+</body>
+</html>
