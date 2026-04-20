@@ -1,143 +1,145 @@
-# GRAND COFFEE
+<div align="center">
 
-A static multi-page coffee shop website built using pure HTML and CSS.
-No frameworks. No JavaScript. Just structure, layout, and design fundamentals.
+<sub>Dev-Chandan404 / Grand-Coffee</sub>
 
----
+# ☕ Grand Coffee — Coffee Shop Website ☕
 
-## OVERVIEW
+### *Clean Design. Pure HTML & CSS. Timeless Experience.*
 
-Grand Coffee is a front-end practice project focused on building a
-real-world style business website using only core web technologies.
+<br/>
 
-The site presents a premium coffee brand experience with multiple pages,
-clean navigation, and a visual layout suitable for cafés, restaurants,
-or small business landing sites.
+[![Live Demo](https://img.shields.io/badge/LIVE_DEMO-FF5722?style=for-the-badge&logo=github-pages&logoColor=white)](https://dev-chandan404.github.io/Grand-Coffee/)
+[![Star on GitHub](https://img.shields.io/badge/STAR_on_GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Dev-Chandan404/Grand-Coffee)
+[![Report Bug](https://img.shields.io/badge/REPORT_BUG-ff69b4?style=for-the-badge&logo=bugsnag&logoColor=white)](https://github.com/Dev-Chandan404/Grand-Coffee/issues)
 
-This project emphasizes:
+<br/>
 
-* Semantic HTML structure
-* Layout design using CSS
-* Multi-page navigation
-* Visual hierarchy and content sections
-* Beginner-to-intermediate front-end workflow
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-181717?style=for-the-badge&logo=github&logoColor=white)](https://pages.github.com/)
+[![MIT License](https://img.shields.io/badge/License-MIT-gray?style=for-the-badge)](LICENSE)
 
----
+<br/>
 
-## PAGES
+[![Commits](https://img.shields.io/github/commit-activity/t/Dev-Chandan404/Grand-Coffee?style=flat-square&label=commits)](https://github.com/Dev-Chandan404/Grand-Coffee/commits)
+[![Repo size](https://img.shields.io/github/repo-size/Dev-Chandan404/Grand-Coffee?style=flat-square)](https://github.com/Dev-Chandan404/Grand-Coffee)
+[![Stars](https://img.shields.io/github/stars/Dev-Chandan404/Grand-Coffee?style=flat-square&color=ffd700)](https://github.com/Dev-Chandan404/Grand-Coffee/stargazers)
 
-/index.html      → Landing page with hero section and introduction
-/about.html      → Story and philosophy of the coffee brand
-/gallery.html    → Visual showcase of products and atmosphere
-/services.html   → Coffee offerings and customer experience
-/contact.html    → Basic contact information layout
+<br/>
 
----
+<a href="https://dev-chandan404.github.io/Grand-Coffee/">
+  <img src="https://api.screenshotone.com/take?url=https://dev-chandan404.github.io/Grand-Coffee/&viewport_width=1280&viewport_height=720&format=jpg&image_quality=90" alt="Grand Coffee Website Preview" width="90%" />
+</a>
 
-## FEATURES
+*Grand Coffee — A premium multi-page coffee shop experience*
 
-* Multi-page static website architecture
-* Clean navigation menu across all pages
-* Hero section with brand message
-* About section describing coffee philosophy
-* Gallery layout highlighting:
-
-  * Latte art
-  * Café interior
-  * Coffee beans
-* Services section presenting:
-
-  * Original coffee blends
-  * Variety of flavors
-  * Comfortable ambience
-* Footer with quick links and branding
-* Fully built using HTML5 + CSS3 only
+</div>
 
 ---
 
-## TECH STACK
+## ✨ About the Project
 
-HTML5
-CSS3
+> A **modern and responsive coffee shop website** built entirely with pure HTML5 and CSS3 — no frameworks, no libraries, no dependencies. Just clean structure, thoughtful layout, and design fundamentals done right.
 
-No libraries
-No frameworks
-No build tools
-No dependencies
+This project is a multi-page static website designed to showcase a coffee shop's brand, services, and atmosphere with a clean layout and user-friendly navigation. Built to strengthen core front-end development skills before moving on to JavaScript frameworks.
 
 ---
 
-## PROJECT STRUCTURE
+## 🎯 Key Features
 
+| | Feature | Description |
+|---|---|---|
+| 🏠 | **Multi-Page Architecture** | Fully navigable multi-page static website |
+| 🎨 | **Clean UI Design** | Visual hierarchy and premium café aesthetic |
+| 🖼️ | **Gallery Layout** | Latte art, café interiors, and coffee bean showcases |
+| 📐 | **Semantic HTML** | Structured, accessible, and well-organised markup |
+| 📱 | **Responsive Layout** | Clean presentation across different screen sizes |
+| ⚡ | **Zero Dependencies** | Pure HTML5 + CSS3 — no build tools required |
+
+---
+
+## 🛠️ Built With
+
+<div align="center">
+
+| HTML5 | CSS3 |
+|-------|------|
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" width="48"/> | <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="48"/> |
+
+> No libraries. No frameworks. No build tools. No dependencies.
+
+</div>
+
+---
+
+## 📂 Website Pages
+
+| Page | Description |
+|------|-------------|
+| 🏠 **Home** (`index.html`) | Landing page with hero section and brand introduction |
+| 🫘 **About** (`About.html`) | Story and philosophy of the Grand Coffee brand |
+| 🖼️ **Gallery** (`Gallery.html`) | Visual showcase of products, latte art & café atmosphere |
+| ☕ **Services** (`Services.html`) | Coffee offerings, blends, and customer experience |
+| 📬 **Contact** (`Contact.html`) | Contact information and reach-out layout |
+
+---
+
+## 🚀 Getting Started
+
+```bash
+# Clone the repo
+git clone https://github.com/Dev-Chandan404/Grand-Coffee.git
+cd Grand-Coffee
+
+# Launch the site — no server required!
+open index.html
+# or simply double-click index.html in your file explorer
+```
+
+---
+
+## 📁 Project Structure
+
+```
 Grand-Coffee/
-│
-├── index.html
-├── about.html
-├── gallery.html
-├── services.html
-├── contact.html
-│
-├── css/
-│   └── style.css
-│
-└── images/
-└── (site assets)
+├── 📄 index.html           # Home / Landing page
+├── 📄 About.html           # About page
+├── 📄 Gallery.html         # Gallery page
+├── 📄 Services.html        # Services page
+├── 📄 Contact.html         # Contact page
+└── 📂 images/              # Site assets & visuals
+```
 
 ---
 
-## RUNNING THE PROJECT
+## 🔮 Future Improvements
 
-1. Clone the repository
-
-   git clone https://github.com/Dev-Chandan404/Grand-Coffee.git
-
-2. Open the folder
-
-   cd Grand-Coffee
-
-3. Launch the site
-
-   open index.html
-   or double-click index.html in your file explorer.
-
-No server required.
+- [ ] Add full responsive/mobile design
+- [ ] Introduce JavaScript for interactivity
+- [ ] Implement a real contact form
+- [ ] Add CSS animations and transitions
+- [ ] Optimise images for performance
 
 ---
 
-## PURPOSE
+<div align="center">
 
-This project was created to strengthen:
+## 📄 License
 
-* Understanding of page layout without frameworks
-* Writing maintainable CSS
-* Structuring real business websites
-* Practicing navigation between multiple HTML files
-* Building design discipline before using JavaScript frameworks
+Distributed under the **MIT License**. See `LICENSE` for more information.
 
----
+<br/>
 
-## FUTURE IMPROVEMENTS
+✨ **Let's Connect** ✨
 
-* Add responsive design for mobile devices
-* Introduce JavaScript for interaction
-* Implement real contact form handling
-* Add animations and transitions
-* Optimize images and performance
-* Deploy as a live hosted site
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:dev.chandankumar404@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Dev-Chandan404)
+[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=netlify&logoColor=white)](https://chandan404.netlify.app/)
 
----
+<br/>
 
-## AUTHOR
+⭐ **If you like this project, please give it a star!** ⭐
 
-Chandan
-Frontend Learner / Builder
+*Made with ❤️ by **Chandan Kumar***
 
----
-
-## LICENSE
-
-This project is open for learning and personal use.
-
----
-
-💡 This project is for learning and front-end development practice.
+</div>
