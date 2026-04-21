@@ -28,7 +28,7 @@
 <br/>
 
 <a href="https://dev-chandan404.github.io/Grand-Coffee/">
-  <img src="https://i.ibb.co/tPMvFY8M/grand-coffee.png" alt="grand-coffee" width="90%" />
+  <img src="./images/grand-coffee.png" alt="grand-coffee" width="90%" />
 </a>
 
 *Grand Coffee — A premium multi-page coffee shop experience*
